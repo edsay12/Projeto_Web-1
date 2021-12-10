@@ -11,13 +11,14 @@ header {
     margin-top: 10px;
 
 }
-.divider{
+
+.divider {
 
     height: 5px;
     width: 100%;
     background-color: #2176FF;
     margin-top: 80px;
-    
+
 }
 
 .container {
@@ -39,7 +40,7 @@ header {
 
 .informations .details {
     width: 100%;
-    
+
 }
 
 .informations .details ul {
@@ -102,7 +103,7 @@ nav.nav_bar .links ul a {
     color: black;
     position: relative;
     text-decoration: none;
-    
+
 }
 
 nav.nav_bar .links ul a::after {
@@ -115,22 +116,24 @@ nav.nav_bar .links ul a::after {
 nav.nav_bar .links ul li a:hover::after {
     content: '';
     position: absolute;
-    bottom:-20px;
+    bottom: -20px;
     left: 0;
     width: 100%;
     height: 2px;
     background-color: #2176FF;
 }
+
 nav.nav_bar .links ul li a:hover {
     margin-top: 100px;
 }
 
-.btn{
+.btn {
     color: white;
     background-color: #2176FF;
 
 }
- .btn:hover {
+
+.btn:hover {
     color: #2176FF;
     background-color: white;
     border: 1px solid #2176FF;
@@ -143,7 +146,7 @@ nav.nav_bar .links ul .btn {
     /* border: 1px solid #2176FF;  */
 }
 
-nav.nav_bar .links ul  .btn:hover {
+nav.nav_bar .links ul .btn:hover {
     color: #2176FF;
     background-color: white;
     border: 1px solid #2176FF;
@@ -178,6 +181,7 @@ main .banner .apresentation {
     z-index: 1;
 
 }
+
 main .banner .apresentation::after {
     content: '';
     position: absolute;
@@ -187,8 +191,8 @@ main .banner .apresentation::after {
     z-index: -1;
     margin-left: 50px;
     margin-bottom: 50px;
-    
- 
+
+
 
 
 }
@@ -219,70 +223,76 @@ a.button_white {
 
 /* first_title */
 
-section .title .first_title{
+section .title .first_title {
     width: 100%;
     margin-top: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-section .title .first_description{
+
+section .title .first_description {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size:12px ;
+    font-size: 12px;
 }
 
-section .first_title i:nth-child(1){
-   color:#2176FF ;
-   margin-right: 20px;
-   
+section .first_title i:nth-child(1) {
+    color: #2176FF;
+    margin-right: 20px;
+
 }
-section .first_title i:nth-child(3){
-   transform: rotate(180deg);
-   color:#2176FF ;
-   margin-left: 20px;
-   
+
+section .first_title i:nth-child(3) {
+    transform: rotate(180deg);
+    color: #2176FF;
+    margin-left: 20px;
+
 }
-.itens_card{
+
+.itens_card {
     display: flex;
     margin-top: 80px;
     justify-content: space-around;
     flex-wrap: wrap;
-    
+
 }
 
-.itens_card .card_item{
+.itens_card .card_item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-width: 100px;
-    
-    
-    
+
+
+
 }
 
-.itens_card .card_item .card_description{
+.itens_card .card_item .card_description {
     max-width: 200px;
     text-align: center;
 }
 
 
-.help{
+.help {
     display: flex;
     padding: 30px 0;
     justify-content: space-between;
     align-items: center;
 }
-.help .help_text .help_title{
+
+.help .help_text .help_title {
     width: 300px;
     font-size: 30px;
 }
-.help .help_text .help_description{ 
+
+.help .help_text .help_description {
     width: 300px;
 }
-.help .help_text .help_button{
+
+.help .help_text .help_button {
     margin-top: 50px;
 }
 
@@ -290,41 +300,44 @@ section .first_title i:nth-child(3){
 /* all services */
 
 
-section.all_services{
+section.all_services {
     width: 100%;
     height: 150px;
     background-color: #2176FF;
     margin-top: 80px;
     color: white;
-    
-}
-section.all_services .container{
-    display: flex;
-    height: 100%;
-    justify-content: space-between;align-items: center;
 
 }
-a.button_white_small{
-    color:#2176FF ;
+
+section.all_services .container {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+a.button_white_small {
+    color: #2176FF;
     padding: 10px;
     font-size: 18px;
     text-decoration: none;
     background-color: white;
 }
 
-input::placeholder{
+input::placeholder {
     padding: 0 10px;
 }
 
 
-section .contact_us{
-    
+section .contact_us {
+
     display: flex;
     justify-content: space-around;
-    padding: 80px 0 ;
+    padding: 80px 0;
 }
 
-section .contact_us .contact_form{
+section .contact_us .contact_form {
     width: 50%;
     background-color: #2176FF;
     display: flex;
@@ -334,33 +347,35 @@ section .contact_us .contact_form{
     border: 4px solid rgb(255, 255, 255);
     outline: 10px solid #2176FF;
 }
-section .contact_us .contact_form form{
+
+section .contact_us .contact_form form {
     padding: 20px;
 }
 
-section .contact_us .contact_form .form_titles{
+section .contact_us .contact_form .form_titles {
 
-  text-align: center;
-  color: white;
-  margin-bottom: 20px;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
 }
 
-section .contact_us .contact_form .form_divider{
+section .contact_us .contact_form .form_divider {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom:10px ;
+    margin-bottom: 10px;
 }
-section .contact_us .contact_form .form_divider a{
-   padding: 5px;
-   margin-left: 10px;
-   font-size: larger;
-   font-weight: 500;
+
+section .contact_us .contact_form .form_divider a {
+    padding: 5px;
+    margin-left: 10px;
+    font-size: larger;
+    font-weight: 500;
 }
 
 
-section .contact_us .contact_form .form_divider input,section .contact_us .contact_form .form_divider textarea{
+section .contact_us .contact_form .form_divider input, section .contact_us .contact_form .form_divider textarea {
     width: 100%;
     padding: 5px;
     margin-left: 10px;
@@ -371,3 +386,92 @@ section .contact_us .contact_form .form_divider input,section .contact_us .conta
 /* section .contact_us .contact_form .form_divider input::selection{
     opacity: 0.1;
 } */
+
+
+
+
+/* depoiments */
+.depoiments .owl-carousel .item .client_depoiment p span i {
+    color: #2176FF;
+    margin-left: 10px;
+}
+
+.depoiments .owl-carousel .item .client_depoiment p {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.depoiments .owl-carousel .item .client_depoiment {
+    padding: 30px 0;
+}
+
+.depoiments .owl-carousel .item {
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.10);
+    border-radius: 4px;
+    width: 500px;
+}
+
+.depoiments .owl-carousel .item .client_depoiment .depoiment_client {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: #767676;
+}
+
+.depoiments .owl-carousel .item .client_depoiment img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.our_specialists{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1140px;
+    flex-wrap: wrap;
+    
+}
+.our_specialists .specialist_item {
+    width: 218px;
+    height: 310px;
+    background: rgba(196, 196, 196, 0.2);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our_specialists .specialist_item .specialist {
+    width: 188px;
+    height: 226px;
+    background: rgba(187, 180, 180, 0.21);
+    border-radius: 21px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.our_specialists .specialist_item .specialist_text .name {
+    font-family: Ruda;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #2176FF;
+    margin-top: 5px;
+}
+.our_specialists .specialist_item .specialist_text .speciality{
+    font-family: Ruda;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.44);
+    margin-top: 5px;
+}
