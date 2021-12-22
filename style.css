@@ -391,82 +391,86 @@ section .contact_us .contact_form .form_divider input, section .contact_us .cont
 
 
 /* depoiments */
-.depoiments{
+.depoiments {
     margin-top: 40px;
 }
+
 .depoiments .owl-carousel .item .client_depoiment {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   /* background-color: red; */
-   padding: 40px;
-   border-radius: 20px;
-   border:1px solid #2176ff4b;
-    
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #2176ff4b;
+
+
 }
-.depoiments .owl-carousel .item .client_depoiment .depoiment_client img{
+
+.depoiments .owl-carousel .item .client_depoiment .depoiment_client img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    
-    
+
+
 }
-.depoiments .owl-carousel .item .client_depoiment .depoiment_client .client_img{
+
+.depoiments .owl-carousel .item .client_depoiment .depoiment_client .client_img {
     width: 100px;
     height: 100px;
     position: relative;
-    margin:40px 0 ;
+    margin: 40px 0;
 }
 
 
-.depoiments .owl-carousel .item .client_depoiment .depoiment_client .client_img::before{
+.depoiments .owl-carousel .item .client_depoiment .depoiment_client .client_img::before {
     content: "❛❛";
     text-align: center;
     background-color: #2176FF;
     color: white;
-    position:absolute;
+    position: absolute;
     font-size: 30px;
     width: 35px;
     height: 35px;
     bottom: 5px;
     right: -10px;
     border-radius: 50%;
-    
+
 
 }
 
-.client_information{
+.client_information {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.client_information .client_divider{
+.client_information .client_divider {
     width: 100px;
     height: 3px;
     background-color: #2176FF;
-    margin: 20px 0 ;
+    margin: 20px 0;
 }
 
-.client_information  .client_name{
+.client_information .client_name {
     color: #000000;
     font-size: 18px;
     font-weight: 500;
 }
 
 /* our .specialist */
-.our_specialists{
+.our_specialists {
     display: flex;
     gap: 20px;
     align-items: center;
     justify-content: space-between;
     max-width: 1140px;
     flex-wrap: wrap;
-    
+
 }
+
 .our_specialists .specialist_item {
     width: 218px;
     height: 310px;
@@ -496,7 +500,8 @@ section .contact_us .contact_form .form_divider input, section .contact_us .cont
     color: #2176FF;
     margin-top: 5px;
 }
-.our_specialists .specialist_item .specialist_text .speciality{
+
+.our_specialists .specialist_item .specialist_text .speciality {
     font-family: Ruda;
     font-style: normal;
     font-weight: bold;
@@ -508,9 +513,89 @@ section .contact_us .contact_form .form_divider input, section .contact_us .cont
 }
 
 
+/* partners */
 
-footer{
-    background-color: red;
+.partners{
     width: 100%;
-    height: 400px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;   
+}
+.partners img{
+    width: 100px;  
+}
+
+footer {
+    background: rgb(33, 118, 255);
+    background: linear-gradient(90deg, rgba(33, 118, 255, 1) 8%, rgba(13, 130, 212, 1) 49%, rgba(0, 212, 255, 1) 74%);
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footer_upside{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+footer .footer_upside .footer_links{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    
+}
+footer .footer_upside .footer_links a{
+    color: white;
+    text-decoration: none;
+    
+}
+/* footer .footer_upside .footer_links .link{
+    display: flex;
+    flex-direction: column;
+} */
+
+footer .footer_upside .footer_links .link .link_section{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footer_social_medias{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+footer .footer_social_medias .social_links{
+    display: flex;
+    
+}
+
+footer .footer_divider{
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin:20px 0;
+}
+
+.footer_downside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_downside .logo{
+    font-size: 30px;
+}
+.footer_downside .politic{
+    display: flex;
+    align-items: center;
+}
+.footer_downside .politic a{
+    margin-left: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
 }
