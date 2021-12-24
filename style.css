@@ -1,3 +1,7 @@
+html{
+    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
+}
 /* resentando o body */
 body {
     margin: 0;
@@ -214,9 +218,15 @@ main .banner .apresentation .button {
 a.button_white {
     color: #2176fff1;
     background-color: white;
-    border-radius: 20px;
-    padding: 15px;
+    border-radius: 15px;
+    padding: 10px;
     text-decoration: none;
+
+}
+.button_white:hover,.button_white_small:hover{
+    color:white ;
+    background-color: #2176fff1;
+    border: 1px solid white;
 
 }
 
@@ -608,4 +618,27 @@ footer .footer_social_medias .social_links{
     color: white;
     text-decoration: none;
     font-size: 10px;
+}
+
+
+/* go_top */
+#go_top{
+    display: flex;
+    position: fixed;
+    right: 10PX;
+    bottom: 50px;
+    background-color: #2176FF;
+    border-radius: 20px;
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    transition:opacity 1.2s ;
+}
+#go_top.off{
+    opacity: 1;
+    
 }
