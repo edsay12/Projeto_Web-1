@@ -159,7 +159,7 @@ nav.nav_bar .links ul .btn:hover {
 
 
 main .banner {
-    background-image: url('banner.jpg');
+    background-image: url('./img/banner.jpg');
     background-size: cover;
     /* background-position: center; */
     /* background-position: center; */
@@ -641,4 +641,27 @@ footer .footer_social_medias .social_links{
 #go_top.off{
     opacity: 1;
     
+}
+
+
+details{
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 300px;
+    padding: 50px;
+    margin-bottom: 0;
+
+    
+}
+summary::marker{
+    color:#2176FF;
+}
+.frequente_questions{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20PX;
+    height: 100vh;
+    align-items:center;
 }
