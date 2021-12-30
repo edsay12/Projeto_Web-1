@@ -159,7 +159,7 @@ nav.nav_bar .links ul .btn:hover {
 
 
 main .banner {
-    background-image: url('./img/banner.jpg');
+    background-image: url('../img/banner.jpg');
     background-size: cover;
     /* background-position: center; */
     /* background-position: center; */
