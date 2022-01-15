@@ -22,3 +22,6 @@ window.addEventListener("scroll",()=>{
 })
 
 // gotop_final
+
+
+// plans

@@ -5,12 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frequente_Quewstions</title>
+    <title>Cadastros</title>
     <!-- global css -->
     <link rel="stylesheet" href="./style/index.css">
     <link rel="stylesheet" href="QuestionsCss.css">
-    
+
 </head>
+<style>
+    .table{
+        margin-top: 40px;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+    table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #2176FF;
+  color: white;
+}
+table td{
+    padding: 20px 0;
+    text-align: center;
+}
+</style>
+
+
 
 <body>
     <div class="shapes">
@@ -51,75 +87,39 @@
     <main>
         <section class="frequent_questions container">
 
-                <div class="Initial_text">
-                    <div class="title">
-                        Perguntas Frequentes
-                    </div>
-                    <div class="separator">
-    
-                    </div>
-                    <div class="sub_title">
-                        Como podemos te ajudar? 
-                    </div>
-                    
+            <div class="Initial_text">
+                <div class="title">
+                    Clientes Cadastrados
                 </div>
-                <div class="questions">
+                <div class="separator">
 
-                    <details>
-                        <summary>Como Faço um agendamento? </summary>
-            
-                        <p>Voce deve nos ligar para o numero 81985909703 para que seja feito
-                            um novo agendamento.
-                        </p>
-                    </details>
-            
-                    <details>
-                        <summary>Como Faço um agendamento? </summary>
-            
-                        <p>Voce deve nos ligar para o numero 81985909703 para que seja feito
-                            um novo agendamento.
-                        </p>
-                    </details>
-            
-                    <details>
-                        <summary>Como Faço um agendamento? </summary>
-            
-                        <p>Voce deve nos ligar para o numero 81985909703 para que seja feito
-                            um novo agendamento.
-                        </p>
-                    </details>
-            
-                    <details>
-                        <summary>Como Faço um agendamento? </summary>
-            
-                        <p>Voce deve nos ligar para o numero 81985909703 para que seja feito
-                            um novo agendamento.
-                        </p>
-                    </details>
-            
-                    <details>
-                        <summary>Como Faço um agendamento? </summary>
-            
-                        <p>Voce deve nos ligar para o numero 81985909703 para que seja feito
-                            um novo agendamento.
-                        </p>
-                    </details>
-            
-                    <details>
-                        <summary>Como Faço um agendamento? </summary>
-            
-                        <p>Voce deve nos ligar para o numero 81985909703 para que seja feito
-                            um novo agendamento.
-                        </p>
-                    </details>
-            
-            
-            
                 </div>
-            
-                
+                <div class="sub_title">
+                    Todos os clientes
+                </div>
 
-           
+            </div>
+            <div class="table">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Cpf</th>
+                            <th>Endereço</th>
+                            <th>Deletar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+
+                    </tbody>
+                </table>
+            </div>
+
+
+
         </section>
     </main>
 
@@ -152,7 +152,7 @@
 
                 <nav class="link">
                     <div class="link_Title">
-                       HORARIO DE ABERTURA
+                        HORARIO DE ABERTURA
                     </div>
                     <div class="links" style="display: flex;">
                         <div>
@@ -190,6 +190,7 @@
 
 
         </div>
+        
 
         <section style="background-color: #0000009a; margin-top: 30px;">
             <div class="footer_downside container">
@@ -214,11 +215,29 @@
 
 
 
-    
 
-       
+
+
 
     <script src="https://kit.fontawesome.com/b3b79f5154.js" crossorigin="anonymous"></script>
+    <script>
+        console.log(localStorage.getItem('Clientes'))
+        const tabela = window.document.querySelector('tbody')
+        for (var c of JSON.parse(localStorage.getItem('Clientes'))) {
+            tabela.innerHTML += `<tr>
+                            <td>${c.name} ${c.sobrenome}</td>
+                            <td>${c.email}</td>
+                            <td>${c.cpf}</td>
+                            <td>${c.adress},${c.city},${c.neighborhood}</td>
+                            <td><i class="far fa-trash-alt"></i></td>
+                        </tr>`
+
+
+
+        }
+
+
+    </script>
 
 </body>
 

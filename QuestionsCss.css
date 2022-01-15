@@ -1,0 +1,119 @@
+header{
+    background-color: white;
+}
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+nav{
+    width: 100vw;
+}
+section.frequent_questions{
+    width: 100%;
+}
+section.frequent_questions .Initial_text{
+    width: 100vw;
+    margin-top: 40px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+section.frequent_questions .Initial_text .separator{
+    margin-top: 20px;
+    width: 50px;
+    height: 4px;
+    background-color: #2176FF;
+}
+section.frequent_questions .Initial_text .sub_title{
+    margin-top: 20px;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.514);
+    
+}
+
+/* details{
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 300px;
+    padding: 50px;
+    margin-bottom: 0;
+    
+} */
+.frequente_questions{
+    display: flex;
+    flex-direction: column;
+}
+
+summary::marker{
+    color:#2176FF;
+}
+
+.questions{
+    margin-top: 40px;
+    width: 100vw;
+    display: flex;
+    gap: 20px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+details{
+    /* border-radius: 15px;     */
+    width: 50%;
+    padding: 30px;
+    margin-bottom:0 ;
+    border: 1px solid black;
+}
+
+footer{
+    margin-top: 50px;
+}
+
+.shapes{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.circle img:nth-child(1){
+    position: absolute;
+    bottom: 0;
+    right: -150px
+
+}
+.circle img:nth-child(2){
+    position: absolute;
+    top: 100px;
+    left: -150px;
+
+}
+.poligon img:nth-child(1){
+    position: absolute;
+    right: 200px;
+    top: 100px;
+    transform: rotate(45deg);
+}
+.poligon img:nth-child(2){
+    position: absolute;
+    left: 140px;
+    bottom: 100px;
+    transform: rotate(80deg);
+}
+.poligon img:nth-child(3){
+    position: absolute;
+    left: -100px;
+    bottom: -150px;
+   
+}
+.footer_upside{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.btn{
+    padding: 10px;
+    border-radius: 10px;
+}

@@ -134,7 +134,6 @@ nav.nav_bar .links ul li a:hover {
 .btn {
     color: white;
     background-color: #2176FF;
-
 }
 
 .btn:hover {
@@ -147,7 +146,8 @@ nav.nav_bar .links ul li a:hover {
 nav.nav_bar .links ul .btn {
     color: white;
     background-color: #2176FF;
-    /* border: 1px solid #2176FF;  */
+    border: 1px solid #2176FF;
+    break-after: avoid;
 }
 
 nav.nav_bar .links ul .btn:hover {
@@ -159,7 +159,7 @@ nav.nav_bar .links ul .btn:hover {
 
 
 main .banner {
-    background-image: url('./img/banner.jpg');
+    background-image: url('../img/banner.jpg');
     background-size: cover;
     /* background-position: center; */
     /* background-position: center; */
@@ -478,7 +478,6 @@ section .contact_us .contact_form .form_divider input, section .contact_us .cont
     justify-content: space-between;
     max-width: 1140px;
     flex-wrap: wrap;
-
 }
 
 .our_specialists .specialist_item {
@@ -539,12 +538,19 @@ section .contact_us .contact_form .form_divider input, section .contact_us .cont
 
 footer {
     
-    background-color: #363636;
-    width: 100%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    /* padding: 30px 0; */
+background-color: #363636;
+    
+/* width: 100%; */
+    
+color: white;
+    
+display: flex;
+    
+flex-direction: column;
+    
+justify-content: c;
+    
+/* padding: 30px 0; */
 }
 
 footer .footer_upside{
@@ -623,7 +629,7 @@ footer .footer_social_medias .social_links{
 
 /* go_top */
 #go_top{
-    display: flex;
+    display: none;
     position: fixed;
     right: 10PX;
     bottom: 50px;
@@ -637,31 +643,56 @@ footer .footer_social_medias .social_links{
     color: white;
     opacity: 0;
     transition:opacity 1.2s ;
+    cursor: pointer;
+    
 }
 #go_top.off{
     opacity: 1;
+    display: flex;
+    
     
 }
 
 
-details{
-    border: 1px solid black;
-    border-radius: 15px;
-    width: 300px;
-    padding: 50px;
-    margin-bottom: 0;
-
-    
-}
-summary::marker{
-    color:#2176FF;
-}
-.frequente_questions{
+/* mapa footer  */
+.map{
+    margin-top: 20px;
+    display: flex;
     width: 100%;
     justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 20PX;
-    height: 100vh;
-    align-items:center;
+}
+
+
+/* Responsividade  */
+
+@media screen and (max-width:973px) {
+    body{
+        background-color: red;
+    }
+    .informations{
+        display: none;
+    }
+    .help.container .help_text{
+        margin: 20px;
+    }
+    .depoiments{
+        padding: 10px;
+    }
+    .depoiments .owl-carousel .item .client_depoiment{
+        padding: 10px;
+    }
+    .our_specialists{
+        gap:10px ;
+        /* justify-content: space-around; */
+    }
+    .specialist_item:nth-child(7),.specialist_item:nth-child(8){
+        display: none;
+
+    }
+  
+    
+}
+@media screen and (max-width:883px) {
+    
+    
 }

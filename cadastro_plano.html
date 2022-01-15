@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/planos.css">
+    <title>Cadastro</title>
+
+</head>
+
+<body>
+
+    <main>
+        
+        <section class="planos_form">
+            
+            <!-- <div class="title">
+                <a href="index.html"><i class="fas fa-angle-left"></i></i></a>
+                <img src="img/ClinicaLogo.png" alt="">
+            </div> -->
+
+            <form action="#">
+                <div class="left_side">
+                    <div class="title">
+                        Informações pessoais
+                    </div>
+
+                    <div class="input_group">
+                        <label for="">Nome<input type="text" name="name"></label>
+                        <label for="">Sobrenome<input type="text" name="sobrenome"></label>
+
+                    </div>
+                    <label for="">E-mail<input type="text" name="email"></label>
+                    <label for="">Endereço<input type="text" name="adress"></label>
+                    <div class="input_group">
+                        <label for="">Cidade<input type="text" name="city"></label>
+                        <label for="">Bairro<input type="text" name="neighborhood"></label>
+                    </div>
+
+                    <label for="">Telefone<input type="text" maxlength="16" minlength="16" id="cadastro_fone" name="tel"></label>
+                    <label for="">Cpf <input type="text" maxlength="14" minlength="14" id="cadastro_cpf"  name="cpf"></label>
+                </div>
+
+                <div class="right_side">
+
+                    <div class="section1">
+                        <div class="title">
+                            Planos
+                        </div>
+
+                        <div class="plans">
+                            <div class="plan">
+                                <h2>200R$</h2>
+                                <p>Consulta unica</p>
+
+                            </div>
+                            <div class="plan">
+                                <h2>2000R$</h2>
+                                <p>Plano anual</p>
+                            </div>
+
+                        </div>
+                        <div class="plan_desc">
+
+                            <p>Os melhores planos por um preço que cabe no seu bolso Assine e confira nossas
+                                novidades.Venha ser clinica slim voce tambem.</p>
+
+                        </div>
+
+
+                    </div>
+                    <div class="plan_terms">
+                        <!-- <label for="">Aceitar os termos de compromisso</label> -->
+                        <div class="check_area">
+                            <input type="checkbox" required name="terms"id="check1">
+                            <label for="check1">Aceitar termos de compromisso</label>
+
+                        </div>
+
+                        <div class="check_area">
+                            <input type="checkbox"  name="promotion" id="check2">
+                            <label for="check2">Desejo receber promoções por email</label>
+
+                        </div>
+
+
+
+
+                        <!-- <label for="">Desejo receber ofertas por email</label> -->
+
+                    </div>
+
+                    <div class="section2">
+                        <button style="cursor: pointer;">Confirmar</button>
+                    </div>
+
+                </div>
+
+
+
+            </form>
+
+        </section>
+    </main>
+
+    <script src="https://kit.fontawesome.com/b3b79f5154.js" crossorigin="anonymous"></script>
+
+    <script>
+        
+        const plan = window.document.querySelectorAll(".planos_form form .right_side .section1 .plans .plan")
+        plan[1].classList.add("selected")
+        for (var item of plan) {
+            item.addEventListener('click', () => {
+                plan[0].classList.toggle('selected')
+                plan[1].classList.toggle('selected')
+            })
+        }
+
+        // const formulario = window.document.querySelector('form')
+        // formulario.addEventListener('submit',(event)=>{
+        //     // event.preventDefault()
+
+        //     // const cpf = formulario.querySelector('input[name=cpf]').value
+        //     // console.log(cpf.match(/^[\d]{3}.[\d]{3}.[\d]{3}-[\d]{2}$/))
+
+
+        // })
+
+        // mascaras
+        const cpf = window.document.querySelector("#cadastro_cpf")
+        cpf.addEventListener("keyup", (event) => {
+            cpf.value = cpf.value.replace(/\D/, "") // vali remover tudo que nao for numero
+            cpf.value = cpf.value.replace(/([\d]{3})/, "$1.")
+            cpf.value = cpf.value.replace(/^([\d]{3})\.([\d]{3})$/, "$1.$2.")
+            cpf.value = cpf.value.replace(/^([\d]{3})\.([\d]{3})\.([\d]{3})$/, '$1.$2.$3-')
+
+        })
+        const phone = window.document.querySelector("#cadastro_fone")
+        phone.addEventListener("keyup", (event) => {
+            phone.value = phone.value.replace(/\D/g, "")
+            phone.value = phone.value.replace(/^(\d\d)(\d)/," ($1) $2")
+            phone.value = phone.value.replace(/\((\d\d)\).(\d{5})/,"($1) $2-")
+            // phone.value = phone.value.replace(/\(([\d]{2})\)([\d]{4})/, "($1)$2-")
+
+        })
+        const formData = {}
+       
+
+        const inputs = window.document.querySelectorAll('input')
+        let erros =[]
+        const submitButton = window.document.querySelector('.section2 button')
+        let clientes = []
+
+        submitButton.addEventListener('click',()=>{
+            erros =[]
+            validaForm()
+        })
+
+        const formulario = window.document.querySelector('form')
+            formulario.addEventListener("submit",(e)=>{
+                e.preventDefault()
+            })
+        
+        function validaForm(){
+            
+            for(var b of inputs){
+                const name = b.name
+                formData[name] = b.value
+                // formData['ref'] = 2
+             }
+
+            verificaSeVazio()
+            validaEmail()
+            validaNome()
+            validaTelefone()
+            validaCpf()
+
+            if(erros.length > 0){
+                let itens =''
+                for(var c of erros){
+                    itens += `- ${c}\n`
+                }
+                alert(itens)
+            }else{
+                clientes = []
+                if(localStorage.getItem('Clientes')){
+                    for(var c of JSON.parse(localStorage.getItem('Clientes'))){
+                        clientes.push(c)
+                    }
+                    
+
+                }
+
+                clientes.push(formData)
+                localStorage.setItem('Clientes', JSON.stringify(clientes))
+                formulario.submit()
+            }
+
+                       
+
+        }
+        function verificaSeVazio(){
+            for(var s in formData){
+                if(formData[s] == ""){
+                    let element = window.document.querySelector(`input[name=${s}]`)
+                    element.style.border = '1px solid red'
+                }else{
+                    let element = window.document.querySelector(`input[name=${s}]`)
+                    element.style.border = '1px solid #2176FF'
+                }
+            }
+        }
+        function validaNome(){
+            for(var c in formData){
+                if(formData[c] == ""){
+                    erros.push('Alguns Campos Estão Vazios')
+                    return false
+                }
+            }
+        }
+
+        function validaEmail(){
+            const element = window.document.querySelector('input[name=email]')
+            if(formData.email.match(/.+\@.+\..+/g)){
+                return true
+            }else{
+                erros.push('Digite Um email Valido')
+                element.style.border ='1px solid red'
+            }
+        }
+        function validaTelefone(){
+            const element = window.document.querySelector('input[name=tel]')
+            
+            if(formData.tel.match(/\((\d){2}\)(\s)(\d){5}\-(\d){4}/g)){
+                return true
+            }else{
+                erros.push('Telefone Invalido')
+                element.style.border = '1px solid red'
+
+            }
+            
+            
+        }
+        function validaCpf(){
+            const element = window.document.querySelector('input[name=cpf]')
+            if(formData.cpf.match(/(\d){3}\.(\d){3}\.(\d){3}\-(\d){2}/)){
+                return true
+
+            }else{
+                erros.push('Cpf invalido')
+                element.style.border ='1px solid red'
+                
+            }
+            
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

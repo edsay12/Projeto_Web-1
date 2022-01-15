@@ -36,14 +36,9 @@ section.login_form {
 }
 
 .login_img img {
-    width: 350px;
+    width: 400px;
 }
 
-.separator {
-    height: 75%;
-    width: 1px;
-    background-color: #2176ff75;
-}
 
 .login_form .form {
     align-self: flex-start;
