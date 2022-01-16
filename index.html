@@ -28,8 +28,8 @@
 
 <body>
 
-    <header>
-        <section class="container">
+    <header id="header">
+        <section class="container" id="backhead">
 
             <div class="informations">
                 <div class="details">
@@ -56,12 +56,12 @@
             </div>
 
             <nav class="nav_bar">
-                <div class="logo">
+                <div class="logo" id="logo">
                     <img src="./img/ClinicaLogo.png" alt="Logo Clinica Slim" width="200px">
                 </div>
 
-                <div class="links">
-                    <ul type='none'>
+                <div class="links" >
+                    <ul type='none' id="links">
                         <li><a href="#HOME">HOME</a></li>
                         <li><a href="#ABOUT">SOBRE</a></li>
                         <li><a href="#DOCTORS">DOUTORES</a></li>
@@ -73,6 +73,11 @@
 
 
                     </ul>
+
+                    <div class="menuB" id="openLinks">
+                        <li><i style="display: flex;" class="fas fa-bars"></i></li>
+                    </div>
+                    
                 </div>
 
 
@@ -677,13 +682,15 @@
                     <div class="link_Title">
                         NOSSOS SERVIÇOS
                     </div>
-                    <div class="link_section">
-                        <a href="">dolor sit amet consectetur</a>
-                        <a href="">dolor sit amet consectetur</a>
-                        <a href="">dolor sit amet consectetur</a>
-                        <a href="">dolor sit amet consectetu</a>
-                        <a href="">dolor sit amet consectetur</a>
+                    <div class="links">
+                        <li >Diagnosticos Clinicos</span>
+                        <li>Exames </span>
+                        <li>Tratamentos</span>
+                        <li>Apitidão fisica</span>
+                        <li>Outros.</span>
+            
                     </div>
+
                 </nav>
 
 
@@ -691,37 +698,29 @@
                     <div class="link_Title">
                         HORARIO DE ABERTURA
                     </div>
-                    <div class="links" style="display: flex;">
-                        <div>
-                            <i class="fas fa-clock icon_blue"></i>
-                        </div>
-
-                        <div>
+                    <div class="links">
                             <li style="list-style: none;"></i>Monday - Friday :9 am - 20
                                 pm
                             </li>
                             <li style="list-style: none;"> Saturday :9 am - 20 pm </li>
                             <li style="list-style: none;"> Sunday :9 am - 20 pm </li>
-                        </div>
+                    </div>
+
+                </nav>
+                <nav class="link">
+                    <div class="link_Title">
+                        FALE CONOSCO 
+                    </div>
+                    <div class="links">
+                            <li style="list-style: none;"><i class="fas fa-phone-alt icon_blue"></i></i> (81)985909703</li>
+                        <li style="list-style: none;"><i class="fas fa-envelope icon_blue"></i></i> clinicaSlim@gmail.com</li>
+
+                        <li style="list-style: none;"><i class="fas fa-map-marker-alt icon_blue"></i>Rua juliano fragoso,215</li>
                     </div>
 
                 </nav>
 
-                <div class="footer_social_medias">
-                    <div class="social_title">
-                        INFORMAÇOES DE CONTATO
-                    </div>
-                    <div class="social_links">
-                        <li><i class="fas fa-phone-alt icon_blue"></i></i> (81)985909703</li>
-                        <li><i class="fas fa-envelope icon_blue"></i></i> clinicaSlim@gmail.com</li>
-
-                        <li><i class="fas fa-map-marker-alt icon_blue"></i>Rua juliano fragoso,215</li>
-
-                    </div>
-
-
-
-                </div>
+               
 
             </div>
 
@@ -730,7 +729,7 @@
         <section class="map">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.0068444436215!2d-35.04076848562113!3d-7.998228981997519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1ab3322703d1%3A0x485e6af7827345cd!2sCl%C3%ADnica%20SIM!5e0!3m2!1sen!2sbr!4v1642165777434!5m2!1sen!2sbr"
-                width="98%" height="200" style="border:0;" allowfullscreen="false" ></iframe>
+                width="98%" height="200" style="border:0;" allowfullscreen="false"></iframe>
         </section>
 
         <section style="background-color: #0000009a; margin-top: 20px;">

@@ -7,8 +7,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
-
+body.display{
+    overflow:hidden ;
+}
 header {
     width: 100%;
     margin: 0 auto;
@@ -100,7 +103,6 @@ nav.nav_bar .links ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 nav.nav_bar .links ul a {
@@ -195,10 +197,6 @@ main .banner .apresentation::after {
     z-index: -1;
     margin-left: 50px;
     margin-bottom: 50px;
-
-
-
-
 }
 
 main .banner .apresentation p, main .banner .apresentation h1 {
@@ -266,7 +264,6 @@ section .first_title i:nth-child(3) {
     margin-top: 80px;
     justify-content: space-around;
     flex-wrap: wrap;
-
 }
 
 .itens_card .card_item {
@@ -577,10 +574,7 @@ footer .footer_upside .footer_links a{
     margin-bottom: 10px;
 } 
 
-footer .footer_upside .footer_links .link .link_section{
-    display: flex;
-    flex-direction: column;
-}
+
 footer .footer_upside .footer_links .link .link_section a{ 
     font-size: 15px;
     
@@ -652,6 +646,9 @@ footer .footer_social_medias .social_links{
     
     
 }
+link .links{
+    display: flex;
+}
 
 
 /* mapa footer  */
@@ -662,12 +659,43 @@ footer .footer_social_medias .social_links{
     justify-content: center;
 }
 
+footer .footer_upside .footer_links .link .link_section{
+    display: flex;
+    flex-direction: column;
+}
 
 /* Responsividade  */
+.menuB{
+    width: 100%;
+    display: flex;
+    flex: 2;
+    padding: 0 10px;
+    list-style: none;
+    font-size: 20px;
+    cursor: pointer;
+    justify-content: end;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    display: none;
+}
+.logo_open{
+    display: none;
+}
+
+.header_open{
+    height: 100vh ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
 
 @media screen and (max-width:973px) {
     body{
-        background-color: red;
+        /* background-color: red; */
     }
     .informations{
         display: none;
@@ -692,7 +720,80 @@ footer .footer_social_medias .social_links{
   
     
 }
+
 @media screen and (max-width:883px) {
+
+    footer .footer_upside .footer_links .link{
+       font-size: 10px;
+    }
+    a.button_white_small{
+        font-size: 15px;
+    }
+    .partners img{
+        width: 80px;
+    }
+    .itens_card .card_item .card_image img{
+        width: 69px;
+    }
+    .itens_card .card_item{
+    width:100px;
+    text-align: center;
+    }
+
+    .itens_card .card_item .card_title h6{
+        font-size: 12px;
+    }
+    .itens_card .card_item .card_description p{
+        font-size: 10px;
+    }
+
     
     
+}
+
+@media screen and (max-width:780px){
+    .apresentation h1{
+        font-size: 25px;
+    }
+    .apresentation p{
+        font-size: 15px;
+    }
+    .apresentation::after{
+        display: none;
+    }
+    .banner{
+        background-position: center;
+    }
+    nav.nav_bar .links ul{
+        display: none;
+    }
+    .menuB{
+        display: flex;
+    }
+
+    
+
+
+    /* nav.nav_bar .links ul{
+        
+    }
+    .logo{
+        display: none;
+    }
+    header{
+        height: 100vh ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    } */
+}
+
+/* Responsividade */
+nav.nav_bar .links .link_open{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+
 }
