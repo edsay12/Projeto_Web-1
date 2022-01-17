@@ -478,7 +478,7 @@ section .contact_us .contact_form .form_divider input, section .contact_us .cont
 }
 
 .our_specialists .specialist_item {
-    width: 218px;
+    width: 217px;
     height: 310px;
     background: rgba(196, 196, 196, 0.2);
     border-radius: 14px;
@@ -488,7 +488,7 @@ section .contact_us .contact_form .form_divider input, section .contact_us .cont
 }
 
 .our_specialists .specialist_item .specialist {
-    width: 188px;
+    width: 187px;
     height: 226px;
     background: rgba(187, 180, 180, 0.21);
     border-radius: 21px;
@@ -937,7 +937,7 @@ footer .footer_upside .footer_links .link .link_section {
         font-size: 10px;
         margin-top: 20px;
         width: 100%;
-        justify-content: center;
+        
     }
 
     .partners img {
@@ -945,6 +945,27 @@ footer .footer_upside .footer_links .link .link_section {
     }
     #logo img{
         width: 120px;
+    }
+    .our_specialists .specialist_item {
+        width: 120px;
+        height: 220px;
+    }
+    .our_specialists .specialist_item .specialist{
+        width: 100px;
+
+    }
+    .our_specialists .specialist_item .specialist_text .name {
+        font-size: 15px;
+
+    }
+    .our_specialists .specialist_item .specialist_text .speciality{
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    .our_specialists .specialist_item .specialist img{
+        width: 100px;
+
     }
 
 
