@@ -1,0 +1,79 @@
+main{
+    width: 100%;
+    height: 100vh;
+    padding: 40px 0;
+}
+
+.service_cards{
+    margin-top: 50px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+    
+ 
+}
+
+.service_cards .service_card{
+    width: 200px;
+    height: 200px;
+    position: relative;
+
+}
+.service_cards .service_card .face{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.service_cards .service_card .face.face_one{
+    background-color: white;
+    border: 1px solid blue;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* z-index: 1; */
+    transform-origin: bottom;
+}
+.service_cards .service_card .face.face_one .image{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service_cards .service_card .face.face_one img{
+    max-width: 100px;
+    text-align: center;
+}
+
+.service_cards .service_card .face.face_one h3{
+    margin: 10px 0 0 ;
+    text-align: center;
+}
+.service_cards .service_card:hover .face.face_one{
+    transform:translateY(-100%) rotateX(90deg);
+    background-color: red;
+}
+.service_cards .service_card .face.face_two{
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transform-origin: top;
+    transform:translateY(100%) rotateX(90deg);
+}
+.service_cards .service_card:hover .face.face_two{
+
+    transform:translateY(0) rotateX(0);
+}
+  
+footer{
+    margin-top: 300px;
+}
