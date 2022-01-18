@@ -11,8 +11,6 @@ main{
     justify-content: center;
     gap: 100px;
     flex-wrap: wrap;
-    
- 
 }
 
 .service_cards .service_card{
@@ -32,7 +30,7 @@ main{
 .service_cards .service_card .face.face_one{
     background-color: white;
     border: 1px solid blue;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,4 +74,49 @@ main{
   
 footer{
     margin-top: 300px;
+}
+
+
+@media screen and (max-width:816px) {
+    footer{
+        margin-top: 580px;
+    }
+    
+}
+@media screen and (max-width:530px) {
+    footer{
+        margin-top: 40px;
+    }
+    .service_cards{
+        gap: 5px;
+    }
+    .service_cards .service_card{
+        width: 120px;
+        height: 100px;
+
+    }
+    .service_cards .service_card .face.face_one{
+        width: 120px;
+        height: 100px;
+        
+    }
+    .service_cards .service_card .face.face_one img{
+        width: 50px;
+        
+    }
+    .service_cards .service_card .face.face_one h6{
+        font-size: 10px;
+        
+    }
+    .service_cards .service_card .face.face_two{
+        width: 120px;
+        height: 100px;
+
+    }
+    .service_cards .service_card .face.face_two p{
+       font-size: 8px;
+       text-align: center;
+
+    }
+    
 }
