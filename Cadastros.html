@@ -105,24 +105,20 @@
             </div>
     
         </div>
-        <div class="table">
-    
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>E-mail</th>
-                        <th>Cpf</th>
-                        <th>Endereço</th>
-                        <th>Deletar</th>
-                    </tr>
-                </thead>
-                <tbody>
-    
-    
-                </tbody>
-            </table>
-        </div>
+        <table>
+            <thead>
+              <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">cpf</th>
+                <th scope="col">rua</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </table>
+        
     
     
     
@@ -256,11 +252,10 @@ buttonLinks.addEventListener('click',nav_response)
     const tabela = window.document.querySelector('tbody')
     for (var c of JSON.parse(localStorage.getItem('Clientes'))) {
         tabela.innerHTML += `<tr>
-                        <td>${c.name} ${c.sobrenome}</td>
-                        <td>${c.email}</td>
-                        <td>${c.cpf}</td>
-                        <td>${c.adress},${c.city},${c.neighborhood}</td>
-                        <td><i class="far fa-trash-alt"></i></td>
+                        <td  data-label="Nome">${c.name} ${c.sobrenome}</td>
+                        <td data-label="E-mail">${c.email}</td>
+                        <td data-label="Cpf">${c.cpf}</td>
+                        <td data-label="Rua">${c.adress}</td>
                     </tr>`
 
 
