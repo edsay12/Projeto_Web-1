@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100;
-    background-color: #2176FF;
+    /* background-color: #2176FF; */
 
     background-size: 100% 50%;
     background-repeat: no-repeat;
@@ -19,12 +19,13 @@ main {
 }
 
 section.planos_form {
-    margin-top:80px;
-    padding: 20px;
+    margin-top:40px;
+    margin-bottom:40px;
+    /* padding: 20px; */
     width: 900px;
     min-height: 500px;
-    border: 1px solid rgba(0, 0, 0, 0.11);
-    background-color: white;
+    /* border: 1px solid rgba(0, 0, 0, 0.11); */
+    /* background-color: #dc3545; */
 }
 /* .planos_form .title{
     display: flex;
@@ -124,12 +125,14 @@ flex-direction: column;
     width: 100%;
     display: flex;
     justify-content: space-around;
-     
+    background: r;
 }
 .planos_form form .right_side .section1 .plans .plan{
   width: 150px;
+  padding: 15px 0;
   text-align: center;
   background-color: rgb(255, 255, 255);
+
 
     border:1px solid #2176ff6b;
     border-radius: 10px;
@@ -233,7 +236,7 @@ input[type=checkbox]:checked::before{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 90%;
+        width: 1;
         padding: 0 25px;
     }
     .planos_form form .left_side{
@@ -243,7 +246,7 @@ input[type=checkbox]:checked::before{
     
     .planos_form form .right_side{
         width: 100%;
-        padding: 20px;
+        /* padding: 20px; */
         display: flex;
         align-items: center;
     }
@@ -260,6 +263,18 @@ input[type=checkbox]:checked::before{
     }
     .planos_form form .left_side input{
         width: 100%;
+    }
+    
+}
+
+
+@media screen and (max-width:470px){
+    .planos_form form .right_side .section1 .plans{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
     }
     
 }

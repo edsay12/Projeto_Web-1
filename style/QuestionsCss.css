@@ -76,42 +76,7 @@ footer{
     margin-top: 50px;
 }
 
-.shapes{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-}
-.circle img:nth-child(1){
-    position: absolute;
-    bottom: 0;
-    right: -150px
 
-}
-.circle img:nth-child(2){
-    position: absolute;
-    top: 100px;
-    left: -150px;
-
-}
-.poligon img:nth-child(1){
-    position: absolute;
-    right: 200px;
-    top: 100px;
-    transform: rotate(45deg);
-}
-.poligon img:nth-child(2){
-    position: absolute;
-    left: 140px;
-    bottom: 100px;
-    transform: rotate(80deg);
-}
-.poligon img:nth-child(3){
-    position: absolute;
-    left: -100px;
-    bottom: -150px;
-   
-}
 .footer_upside{
     max-width: 1140px;
     margin: 0 auto;
