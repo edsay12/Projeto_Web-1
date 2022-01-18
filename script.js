@@ -26,6 +26,10 @@ window.addEventListener("scroll",()=>{
 
 // plans
 
+export function nav_response(){
+    
+}
+
 const buttonLinks = window.document.getElementById('openLinks')
 
 function nav_response(){

@@ -6,10 +6,14 @@ body{
     overflow-x: hidden;
 }
 nav{
-    width: 100vw;
+    /* width: 100vw; */
 }
 section.frequent_questions{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 section.frequent_questions .Initial_text{
     width: 100vw;
@@ -19,7 +23,6 @@ section.frequent_questions .Initial_text{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 section.frequent_questions .Initial_text .separator{
     margin-top: 20px;
