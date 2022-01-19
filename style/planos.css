@@ -224,7 +224,7 @@ input[type=checkbox]:checked::before{
     border:1px solid black;
     background-color:#2176FF;
     color: white;
-    font-size: 8px;
+    font-size: 10px;
     text-align: center;
      
 

@@ -54,6 +54,10 @@ summary::marker{
     color:#2176FF;
 }
 
+details[open] summary{
+    font-weight: bold;
+}
+
 .questions{
     margin-top: 40px;
     width: 100vw;
