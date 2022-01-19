@@ -20,8 +20,8 @@ table {
     border: 1px solid #ddd;
     padding: .35em;
   }
-  table tr:nth-child(even){
-      background-color: violet;
+  table tr:nth-child(even):hover{
+      background-color: rgba(212, 218, 243, 0.884);
   }
   
   table th,

@@ -11,7 +11,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./style/index.css">
-    <link rel="stylesheet" href="/style/QuestionsCss.css">
+    <link rel="stylesheet" href="style/QuestionsCss.css">
     <link rel="stylesheet" href="style/cadastros.css">
     
 </head>
@@ -45,7 +45,7 @@
 
             <nav class="nav_bar">
                 <div class="logo" id="logo">
-                    <img src="./img/ClinicaLogo.png" alt="Logo Clinica Slim" width="200px">
+                    <a href="index.html"><img src="./img/ClinicaLogo.png" alt="Logo Clinica Slim" width="200px"></a>
                 </div>
 
                 <div class="links" >
@@ -220,51 +220,9 @@
 
        
 
-    <script src="https://kit.fontawesome.com/b3b79f5154.js" crossorigin="anonymous"></script>
-    <script >
-
-const buttonLinks = window.document.getElementById('openLinks')
-
-function nav_response(){
-    window.document.getElementById("logo").classList.toggle('logo_open')
-    window.document.getElementById('links').classList.toggle('link_open')
-    window.document.getElementById('header').classList.toggle('header_open')
-    window.document.querySelector('body').classList.toggle('display')
-
-    window.document.addEventListener('scroll',nav_responseWindow)
-
-}
-function nav_responseWindow(){
-    window.document.getElementById("logo").classList.remove('logo_open')
-    window.document.getElementById('links').classList.remove('link_open')
-    window.document.getElementById('header').classList.remove('header_open')
-    window.document.querySelector('body').classList.remove('display')
-}
-
-
-buttonLinks.addEventListener('click',nav_response)
-
-    </script>
 
 <script src="https://kit.fontawesome.com/b3b79f5154.js" crossorigin="anonymous"></script>
-<script>
-    console.log(localStorage.getItem('Clientes'))
-    const tabela = window.document.querySelector('tbody')
-    for (var c of JSON.parse(localStorage.getItem('Clientes'))) {
-        tabela.innerHTML += `<tr>
-                        <td  data-label="Nome">${c.name} ${c.sobrenome}</td>
-                        <td data-label="E-mail">${c.email}</td>
-                        <td data-label="Cpf">${c.cpf}</td>
-                        <td data-label="Rua">${c.adress}</td>
-                    </tr>`
-
-
-
-    }
-
-
-</script>
-
+<script src="scripts/cadastros.js"></script>
 </body>
 
 </html>
